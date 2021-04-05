@@ -1,0 +1,20 @@
+{
+  "name": "twitch-drops",
+  "version": "1.0.0",
+  "description": "Twitch Drops",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "discord.js": "^12.5.3",
+    "fs": "0.0.1-security",
+    "moment": "^2.29.1",
+    "puppeteer": "^8.0.0",
+    "puppeteer-extra": "^3.1.18",
+    "puppeteer-extra-plugin-stealth": "^2.7.6"
+  }
+}
