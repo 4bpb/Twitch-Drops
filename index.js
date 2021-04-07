@@ -40,7 +40,7 @@ puppeteer.launch({
     }
     await page.goto('https://www.twitch.tv/drops/inventory', {waitUntil: 'networkidle2'})
     global.screenshot = await page.screenshot({path: 'Dropstart.png', fullPage: true});
-    await page.goto('https://www.twitch.tv/rainbow6', {waitUntil: 'networkidle2'})
+    await page.goto('https://www.twitch.tv/rocketleague', {waitUntil: 'networkidle2'})
     
     await page.click('#root > div > div.tw-flex.tw-flex-column.tw-flex-nowrap.tw-full-height > div > main > div.root-scrollable.scrollable-area.scrollable-area--suppress-scroll-x > div.simplebar-scroll-content > div > div > div.persistent-player.tw-elevation-0 > div > div.video-player > div > div > div > div.content-overlay-gate.player-overlay-background.player-overlay-background--darkness-0.tw-absolute.tw-align-items-center.tw-bottom-0.tw-c-text-overlay.tw-flex.tw-flex-column.tw-justify-content-center.tw-left-0.tw-right-0.tw-top-0 > div > div.content-overlay-gate__allow-pointers.tw-mg-t-3 > button').catch(err => {
         log('No Viewer Discrection Button to Click','err')
@@ -76,10 +76,12 @@ async function useCookie(){
 
 
 async function refresh(){
-    await page.goto('https://www.twitch.tv/rainbow6', {waitUntil: 'networkidle2'})
-    //await page.screenshot({path: 'refresh'+moment().format('ss')+'.png', fullPage: true});
 
-    if(await page.url()==='https://www.twitch.tv/rainbow6'){
+
+    await page.goto('https://www.twitch.tv/rocketleague', {waitUntil: 'networkidle2'})
+    await page.screenshot({path: 'refresh.png', fullPage: true});
+
+    if(await page.url()==='https://www.twitch.tv/rocketleague'){
         const cookies = await page.cookies();
         saveCookie(cookies)
 
