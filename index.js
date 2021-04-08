@@ -26,8 +26,8 @@ puppeteer.launch({
         log('No Cookies Sending to Login', 'init')
         
         await page.goto('https://www.twitch.tv/login', {waitUntil: 'networkidle2'})
-        await page.type('#login-username', 'wazlu ', {delay: 100}); // Types slower, like a user
-        await page.type('#password-input', 'craftmine', {delay: 100}); // Types slower, like a user
+        await page.type('#login-username', ' ', {delay: 100}); // Types slower, like a user enter username here
+        await page.type('#password-input', '', {delay: 100}); // Types slower, like a user enter password here
         await page.click('#root > div > div.scrollable-area > div.simplebar-scroll-content > div > div > div > div.tw-mg-b-1 > form > div > div:nth-child(3) > button')
 
     
@@ -47,6 +47,7 @@ puppeteer.launch({
         page.screenshot({path: 'NoButtonComf.png', fullPage: true});
         setInterval(refresh, 35000);
     })
+   
     setInterval(refresh, 35000);
     
 
